@@ -1,0 +1,82 @@
+body {
+  padding: 50px;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif; background-image: url(2143869-shield.png);  
+  color: #FFFFFF ; -moz-background-size: cover;
+  background-size: cover; 
+}
+
+a {
+  color: #49FF00; /*green*/
+}
+
+#content {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity:1.0;
+}
+
+#room {
+  margin-bottom: 1em;
+  color: #FD0000 ;  /*red*/
+}
+
+#messages {
+  width: 690px;
+  height: 400px;
+  overflow: auto;
+  /*background-color:	#D8E7E9;  */
+  margin-bottom: 1em;
+  margin-right: 10px; 
+  /*background-color: rgba(0, 0, 0, .2); */
+  /*opacity:0.5*/; border-color: #00FFFB ; border-width: thin ;
+  color: #FFFFFF ; /*font-weight: 700 ;*/ 
+  
+}
+
+#room-list {
+  float: right;
+  width: 100px;
+  height: 300px;
+  overflow: auto; 
+  color: #00EBFF ; 
+  cursor : pointer;
+}
+
+#room-list div {
+  border-bottom: 1px solid #eee;
+}
+
+#room-list div:hover {
+  background-color: #FF9980;
+}
+
+#send-message {
+  width: 700px;
+  margin-bottom: 1em;
+  margin-right: 1em; 
+}
+
+#help {
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #00FDF9;  
+}
+
+input#send-button {
+background-color: #12070C;
+border-radius:5px;
+border:none;
+padding:10px 25px;
+color:#FFF;
+font-size:14px;
+text-shadow:1px 1px 1px #949494;
+cursor : pointer;
+}
+
+input#send-button:hover{
+background-color:#FF9980
+}
+
+input#textarea { 
+
+}

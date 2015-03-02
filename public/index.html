@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+  <meta charset="utf-8">
+  <title>Chat</title>
+  <link rel="stylesheet" href='stylesheets/style.css'></link>
+</head>
+
+<body>
+<div id='content'>
+<div id='room'></div>
+<div id='room-list'></div>
+<div id='messages'></div>
+
+  <form id='send-form'>
+    <input id='send-message' />
+    <input id='send-button' type='submit' value='送出' />
+
+    <div id='help'>
+      神盾局聊天指令:
+      <ul>
+        <li>若要更改暱稱 請輸入: <code> /nick 使用者名稱</code></li>
+        <li>若要進入房間或開啟新房間 請輸入: <code> /join 房間名稱</code></li>
+      </ul>
+    </div>
+  </form>
+</div>
+
+<script src='/socket.io/socket.io.js' type='text/javascript'></script>
+<script src="../javascripts/jquery-1.11.2.min.js" type='text/javascript'></script>
+<script src="../javascripts/chat.js" type='text/javascript'></script>
+<script src="../javascripts/chat_ui.js" type='text/javascript'></script>
+</body>
+</html>

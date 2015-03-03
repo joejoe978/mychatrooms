@@ -33,7 +33,7 @@ $(document).ready(function() {
     var message;
 
     if (result.success) {
-      message = 'You are now known as ' + result.name + '.';
+      message = '您現在的暱稱為' + result.name + '.';
     } else {
       message = result.message;
     }
@@ -42,7 +42,7 @@ $(document).ready(function() {
 
   socket.on('joinResult', function(result) {
     $('#room').text(result.room);
-    $('#messages').append(divSystemContentElement('Room changed.'));
+    $('#messages').append(divSystemContentElement('房間已更改'));
   });
 
   socket.on('message', function (message) {

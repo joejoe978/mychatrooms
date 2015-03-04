@@ -24,6 +24,22 @@ function processUserInput(chatApp, socket) {
   $('#send-message').val('');
 }
 
+//////////////////////////
+var scrollHeightDiff = 0;
+
+function scroll_control()
+{
+        var scrObj = document.getElementById("DivTag");
+        var diff = 0;
+        diff = scrObj.scrollHeight - scrollHeightDiff ;
+        scrollHeightdiff = scrObj.scrollHeight
+        //捲軸控制，置底時強制置底，非置底時不予控制
+        if(!(scrollHeightDiff - (scrObj.scrollTop + diff + Div_scrollTop&scrollHeight_diff)))
+                scrObj.scrollTop = scrObj.scrollHeight;
+}
+////////////////////////////
+
+
 var socket = io.connect();
 
 $(document).ready(function() {

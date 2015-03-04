@@ -12,11 +12,17 @@ a {
 }
 
 #content {
-  width: 800px;
+  width: 900px;
   margin-left: auto;
   margin-right: auto;
   opacity:1.0;
-  
+}
+
+#room-name{
+  color: #F8FF00;  
+  font-size: large ;
+  margin-left : 700px;  
+  font-size: large ;
 }
 
 #room {
@@ -39,11 +45,26 @@ a {
   font-weight:bolder; 
 }
 
+#menu {
+  float: right; 
+  width: 200px;
+  height: 400px;
+  color: #F8FF00 ; 
+}
+
 #room-list {
-  float: right;
-  width: 100px;
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  color: #F8FF00 ; 
+  cursor : pointer;
+}  
+
+#room-people {
+  position: absolute;
+  margin-top: 100px;
+  width: 200px;
   height: 300px;
-  overflow: auto; 
   color: #F8FF00 ; 
   cursor : pointer;
 }
@@ -82,11 +103,4 @@ cursor : pointer;
 
 input#send-button:hover{
 background-color:#FF9980
-}
-
-#room-name{
-  color: #F8FF00;  
-  font-size: large ;
-  margin-left : 700px;  
-  font-size: large ;
 }

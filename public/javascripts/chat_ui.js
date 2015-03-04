@@ -24,7 +24,7 @@ function processUserInput(chatApp, socket) {
   $('#send-message').val('');
 }
 
-//////////////////////////
+/*
 var scrollHeightDiff = 0;
 
 function scroll_control()
@@ -37,7 +37,7 @@ function scroll_control()
         if(!(scrollHeightDiff - (scrObj.scrollTop + diff + Div_scrollTop&scrollHeight_diff)))
                 scrObj.scrollTop = scrObj.scrollHeight;
 }
-////////////////////////////
+*/
 
 
 var socket = io.connect();
@@ -80,12 +80,61 @@ $(document).ready(function() {
       chatApp.processCommand('/join ' + $(this).text());
       $('#send-message').focus();
     });
+	
+	for(var people in rooms) {
+      room = people.substring(1, room.length);
+      if (room != '') {
+        $('#room-people').append(divEscapedContentElement(people));
+      }
+    }
+	
+	//////////
+	
+	$('#room-people').empty();
+	var usersInRoom = io.sockets.clients(room);
+	if (usersInRoom.length > 1) {
+		for (var index in usersInRoom) {
+		  var userSocketId = usersInRoom[index].id;
+		  if (userSocketId != socket.id) {
+			if (index > 0) {
+			   $('#room-people').append(divEscapedContentElement(usersInRoom[index]));
+			}
+		  }
+		}
+    } 
+	/////////
   });
+
+/*
+  socket.on('rooms', function(rooms) {
+    $('#room-people').empty();
+  
+	for(var people in rooms) {
+      room = people.substring(1, room.length);
+      if (room != '') {
+        $('#room-people').append(divEscapedContentElement(people));
+      }
+    }
+	
+	var usersInRoom = io.sockets.clients(room);
+	if (usersInRoom.length > 1) {
+		for (var index in usersInRoom) {
+		  var userSocketId = usersInRoom[index].id;
+		  if (userSocketId != socket.id) {
+			if (index > 0) {
+			   $('#room-people').append(divEscapedContentElement(usersInRoom[index]));
+			}
+		  }
+		}
+    } 
+   });
+*/
 
   setInterval(function() {
     socket.emit('rooms');
-  }, 1000);
+  }, 500);
 
+  
   $('#send-message').focus();
 
   $('#send-form').submit(function() {

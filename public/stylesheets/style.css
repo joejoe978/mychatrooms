@@ -44,7 +44,7 @@ a {
   /*background-color: rgba(0, 0, 0, .2); */
   /*opacity:0.5*/; border-color: #00FFFB ; border-width: thin ;
   color: #000000  ; /*font-weight: 700 ;*/ 
-  line-height: 30px;
+  line-height: 35px;
   font-weight:bolder; 
   font-size: larger;
 }
@@ -58,9 +58,9 @@ a {
 
 #room-list {
   position: absolute;
-  margin-top: 300px;
+  margin-top: 200px;
   width: 200px;
-  height: 100px;
+  height: 200px;
   color: #2200FD ; 
   cursor : pointer;
   font-size: x-large ; 
@@ -70,9 +70,9 @@ a {
 #room-people {
   position: absolute;
   width: 200px;
-  height: 300px;
+  height: 200px;
   color: #2200FD ; 
- 
+  font-size: large;
 }
 
 #room-list div {
@@ -86,11 +86,12 @@ a {
 
 #send-message {
   width: 700px;
-  height: auto;
+  height: 31px;
   margin-bottom: 1em;
   margin-right: 1em;
   opacity:0.5;
-}
+  font-size:30px;
+  }
 
 #help {
   font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
